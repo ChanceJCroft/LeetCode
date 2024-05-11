@@ -47,3 +47,19 @@ function romanToInt(s: string): number {
 
     return total + romanNumerals[lastInt];
 };
+
+
+//Problem 88 -- Merge Sorted Array
+/**
+ Do not return anything, modify nums1 in-place instead.
+ */
+
+ //Needs further work/investigation -- needs to modify in place. Yuck
+ function merge(nums1: number[], m: number, nums2: number[], n: number): void {
+    for(let i = 0; i < nums2.length; i++) {
+        nums1.push(nums2[i]);
+    }
+    const count = nums1.filter(x => x===0).length;
+
+    nums1.sort().splice(0,count);
+};
