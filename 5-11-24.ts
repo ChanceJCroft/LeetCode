@@ -63,3 +63,21 @@ function romanToInt(s: string): number {
 
     nums1.sort().splice(0,count);
 };
+
+
+
+
+//Problem 26 - Remove Duplicates from Sorted Array
+//I was required to sort and remove duplicates from the array that was passed in, which is why I went with this approach
+function removeDuplicates(nums: number[]): number {
+    nums.sort(function(a,b){return a - b});
+
+    for(let i = 0; i < nums.length; i++) {
+        if(nums[i] === nums[i+1]) {
+            nums.splice(i, 1);
+            i--;
+        }
+    }
+
+    return nums.length;
+};
